@@ -2,7 +2,7 @@
   "name": "node-kcp-token",
   "version": "1.0.12",
   "description": "Modified KCP protocol for Node.js, forked from https://github.com/leenjewel/node-kcp",
-  "main": "node-kcp.node",
+  "main": "index.js",
   "dependencies": {
     "nan": "^2.15.0"
   },
