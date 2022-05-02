@@ -1,7 +1,7 @@
 {
-  "name": "node-kcp",
+  "name": "node-kcp-token",
   "version": "1.0.12",
-  "description": "KCP protocol for Node.js",
+  "description": "Modified KCP protocol for Node.js, forked from https://github.com/leenjewel/node-kcp",
   "main": "node-kcp.node",
   "dependencies": {
     "nan": "^2.15.0"
@@ -11,7 +11,7 @@
     "grunt": "^1.0.4",
     "grunt-contrib-clean": "latest",
     "grunt-mocha-test": "latest",
-    "mocha": "^7.0.0"
+    "mocha": "^7.2.0"
   },
   "scripts": {
     "test": "grunt",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leenjewel/node-kcp.git"
+    "url": "git+https://github.com/TheLostTree/node-kcp.git"
   },
   "keywords": [
     "kcp",
@@ -27,11 +27,11 @@
     "game",
     "server"
   ],
-  "author": "leenjewel",
+  "author": "TheLostTree",
   "license": "Apache-2.0",
   "gypfile": true,
   "bugs": {
-    "url": "https://github.com/leenjewel/node-kcp/issues"
+    "url": "https://github.com/TheLostTree/node-kcp/issues"
   },
-  "homepage": "https://github.com/leenjewel/node-kcp#readme"
+  "homepage": "https://github.com/TheLostTree/node-kcp#readme"
 }

@@ -311,6 +311,7 @@ namespace node_kcp
         KCPObject* thiz = ObjectWrap::Unwrap<KCPObject>(info.Holder());
         int64_t arg0 = To<int64_t>(info[0]).FromJust();
         IUINT32 current = (IUINT32)(arg0 & 0xfffffffful);
+        //bruh? 
         IUINT32 ret = ikcp_check(thiz->kcp, current) - current;
         Local<Integer> num = Nan::New((uint32_t)(ret>0?ret:0));
         info.GetReturnValue().Set(num);

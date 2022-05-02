@@ -18,13 +18,10 @@ npm install -g node-gyp
 
 node-gyp configure
 
-git clone git@github.com:leenjewel/node-kcp
+git clone git@github.com:thelosttree/node-kcp
 
 cd node-kcp
 
-git submodule init
-
-git submodule update
 
 node-gyp build
 ```
@@ -33,14 +30,16 @@ node-gyp build
 
 ### Install by npm
 
+
+may not be there tbh
 ```
-npm install node-kcp
+npm install node-kcp-token
 ```
 
 ### udpserver.js
 
 ```
-var kcp = require('node-kcp');
+var kcp = require('node-kcp-token');
 var dgram = require('dgram');
 var server = dgram.createSocket('udp4');
 var clients = {};
@@ -62,7 +61,7 @@ server.on('message', (msg, rinfo) => {
             address : rinfo.address,
             port : rinfo.port
         };
-        var kcpobj = new kcp.KCP(123, context);
+        var kcpobj = new kcp.KCP(123, 1, context);
         kcpobj.nodelay(0, interval, 0, 0);
         kcpobj.output(output);
         clients[k] = kcpobj;
@@ -95,7 +94,7 @@ server.bind(41234);
 
 ```
 var kcp = require('node-kcp');
-var kcpobj = new kcp.KCP(123, {address: '127.0.0.1', port: 41234});
+var kcpobj = new kcp.KCP(123, 1, {address: '127.0.0.1', port: 41234});
 var dgram = require('dgram');
 var client = dgram.createSocket('udp4');
 var msg = 'hello world';

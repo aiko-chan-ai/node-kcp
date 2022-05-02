@@ -1,10 +1,11 @@
 var kcp = require('./../build/Release/kcp');
 var expect = require('chai').expect;
 
-var kcpobj1 = new kcp.KCP(123, {name : 'kcpobj1'});
-var kcpobj2 = new kcp.KCP(123, {name : 'kcpobj2'});
+var kcpobj1 = new kcp.KCP(123, 1,{name : 'kcpobj1'});
+var kcpobj2 = new kcp.KCP(123, 1,{name : 'kcpobj2'});
 
-var interval = 10;
+
+var interval = 1;
 var msg = 'helloworld';
 
 describe('Test node-kcp', function(){
@@ -37,12 +38,14 @@ describe('Test node-kcp', function(){
                 clearTimeout(kcpobj1TID);
                 done();
             });
+
             kcpobj1.send(msg);
         });
     });
 
     describe('# recveive message', function(){
         it('test receive msg', function(done){
+            
             var kcpobj2TID = setTimeout(function(){
                 kcpobj2.update(Date.now());
                 expect(kcpobj2.recv().toString()).to.be.equal(msg);
@@ -53,3 +56,18 @@ describe('Test node-kcp', function(){
 
 });
 
+
+/*
+
+
+  Test node-kcp
+    # nodelay
+      ✔ set default mode
+    # update & check
+      ✔ test update and check
+    # input & output
+      1) test input and output
+    # recveive message
+      2) test receive msg
+
+    */
