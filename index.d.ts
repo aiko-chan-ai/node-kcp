@@ -36,7 +36,7 @@ export class KCP {
     send(data: string | Buffer): void;
  
     //this user field is taken from the constructor
-    output(func: (data: any, size: number, user: AddressInfo) => void): void;
+    output(func: (data: Buffer, size: number, user: AddressInfo) => void): void;
     
     //pass date.now() here
     update(ts: number): void;
