@@ -116,6 +116,7 @@ namespace node_kcp
         SetPrototypeMethod(tpl, "waitsnd", Waitsnd);
         SetPrototypeMethod(tpl, "nodelay", Nodelay);
         SetPrototypeMethod(tpl, "stream", Stream);
+        SetPrototypeMethod(tpl, "sussyupdate", SussyUpdate);
 
         constructor.Reset(GetFunction(tpl).ToLocalChecked());
         Set(target, Nan::New("KCP").ToLocalChecked(), GetFunction(tpl).ToLocalChecked());
@@ -210,7 +211,14 @@ namespace node_kcp
         }
     }
 
-    NAN_METHOD(KCPObject::Input)
+
+    NAN_METHOD(KCPObject::SussyUpdate)
+    {
+        KCPObject* thiz = ObjectWrap::Unwrap<KCPObject>(info.Holder());
+        ikcp_sussyupdate(thiz->kcp);
+    }
+
+    NAN_METHOD(KCPObject::Input)    
     {
         KCPObject* thiz = ObjectWrap::Unwrap<KCPObject>(info.Holder());
         char* buf = NULL;

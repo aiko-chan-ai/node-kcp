@@ -5,7 +5,7 @@ var kcpobj1 = new kcp.KCP(123, 1,{name : 'kcpobj1'});
 var kcpobj2 = new kcp.KCP(123, 1,{name : 'kcpobj2'});
 
 
-var interval = 1;
+var interval = 5;
 var msg = 'helloworld';
 
 describe('Test node-kcp', function(){

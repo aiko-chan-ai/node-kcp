@@ -9,6 +9,7 @@ var msg = JSON.stringify({
 });
 var idx = 1;
 var interval = 200;
+//kcpobj.sussyupdate();
 
 kcpobj.stream(1);
 kcpobj.nodelay(0, interval, 0, 0);
