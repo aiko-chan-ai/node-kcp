@@ -1304,9 +1304,4 @@ IUINT32 ikcp_getconv(const void *ptr)
 	return conv;
 }
 
-void ikcp_sussyupdate(ikcpcb *kcp)
-{
-	kcp->updated = 1;
-}
-
 

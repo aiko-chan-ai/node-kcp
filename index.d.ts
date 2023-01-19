@@ -50,6 +50,4 @@ export class KCP {
     peeksize(): number;
  
     waitsnd(): number;
-    
-    sussyupdate(): void;
 }

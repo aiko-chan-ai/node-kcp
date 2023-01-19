@@ -48,7 +48,6 @@ namespace node_kcp {
             static NAN_METHOD(Waitsnd);
             static NAN_METHOD(Nodelay);
             static NAN_METHOD(Stream);
-            static NAN_METHOD(KCPObject::SussyUpdate);
             
             static Nan::Persistent<v8::Function> constructor;
             static int kcp_output(const char *buf, int len, ikcpcb *kcp, void *user);

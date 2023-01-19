@@ -4,14 +4,14 @@
   "description": "Modified KCP protocol for Node.js, forked from https://github.com/leenjewel/node-kcp",
   "main": "index.js",
   "dependencies": {
-    "nan": "^2.15.0"
+    "nan": "^2.17.0"
   },
   "devDependencies": {
     "chai": "latest",
     "grunt": "^1.0.4",
     "grunt-contrib-clean": "latest",
     "grunt-mocha-test": "latest",
-    "mocha": "^7.2.0"
+    "mocha": "^10.2.0"
   },
   "scripts": {
     "test": "grunt",
